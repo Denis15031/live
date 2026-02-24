@@ -7,7 +7,7 @@ func main() {
 	slice = append(slice, "0", "1", "2", "3")
 	fmt.Println(slice, len(slice), cap(slice)) // [0 1 2 3] 4 5
 	addToSlice1(slice)
-	fmt.Println(slice, len(slice), cap(slice)) // [0 1 2 one] 4 5  (в функции идет срез, но в мейне выводит оригинальный срез)
+	fmt.Println(slice, len(slice), cap(slice)) // [0 1 2 one] 4 5 (в функции идет срез, но в мейне выводит оригинальный срез)
 	addToSlice2(slice)
 	fmt.Println(slice, len(slice), cap(slice)) // [0 1 2 one] 4 5 (two записан, но len=4, аппенда не было, поэтому two не видно)
 }
